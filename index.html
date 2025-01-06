@@ -1,36 +1,43 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>repl.it</title>
-    <link href="styles.css" rel="stylesheet" type="text/css" />
-  </head>
- <body>
 
-<h1>HANGMAN</h1>
+<head>
+  <title>repl.it</title>
+  <link href="styles.css" rel="stylesheet" type="text/css" />
+  <script src="wordlist.js"></script>
+</head>
 
-<!-- select box for difficulty? -->
+<body>
 
-<button id="start">Start New Game</button>
+  <h1 id="title">HANGMAN</h1>
 
-<!-- try the more advanced button system from classroom instead of this! -->
-<select id="guessedLetter">
-  <option value="a">a</option>
-  <option value="b">b</option>
-  <!-- ..... -->
-</select>
+  <!-- select box for difficulty? -->
+  <div id="hangman"></div>
 
-<button id="guessLetter">Guess Letter</button>
+  <div>
+    <button id="start">Start New Game</button>
+  </div>
+  <!-- try the more advanced button system from classroom instead of this! -->
+  <div id="guessArea">
+    <input id="guess" placeholder="Make a guess!"></input>
+    <button id="guessLetter">Guess Letter</button>
+    <button id="guessWord">Guess Word</button>
+  </div>
 
-<h3>Guessed Letters</h3>
+  <div>
+    <h3>Guessed Letters</h3>
+    <div id="guessedLetters"></div>
+  </div>
 
-<div id="guessedLetters"></div>
+  <div>
+    <h4 id="numGuesses">Guesses Remaining: </h4>
+  </div>
 
-<h4>Guesses Remaining...</h4>
-<div id="numGuesses"></div>
+  <div id="word"></div>
 
-<div id="word"></div>
+  <div id="guessResult"></div>
 
-<script src="script.js"></script>
-
+  <script src="script.js"></script>
 </body>
+
 </html>

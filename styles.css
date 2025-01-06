@@ -1,1 +1,33 @@
 /* Add CSS styles for your web site here and use them in index.html. */
+html {
+    background-color:rgb(87, 5, 5);
+}
+
+div {
+    text-align: center;
+    padding: 20px;
+}
+
+#title {
+    font-family:horror-
+    ;
+    text-align: center;
+    font-size: 75px;
+    color: rgb(31, 4, 4);
+}
+
+button, input {
+    border-radius: 10px;
+    border-color: darkblue;
+    padding: 5px;
+    background-color: rgb(166, 186, 203);
+}
+
+body {
+    border: 1px black solid;
+}
+
+#hangman {
+    border: 1px black solid;
+    height: 350px;
+}
