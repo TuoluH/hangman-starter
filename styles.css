@@ -9,8 +9,6 @@ div {
 }
 
 #title {
-    font-family:horror-
-    ;
     text-align: center;
     font-size: 75px;
     color: rgb(31, 4, 4);
@@ -23,11 +21,11 @@ button, input {
     background-color: rgb(166, 186, 203);
 }
 
-body {
+/* body {
     border: 1px black solid;
-}
+} */
 
-#hangman {
+/* #hangman {
     border: 1px black solid;
     height: 350px;
-}
+} */
