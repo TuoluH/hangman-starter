@@ -114,14 +114,10 @@ function gameOver(win) {
 }
 
 function checkKey(e) {
-    console.log(e.code)
     let guessLen = document.getElementById("guess").value.length;
-    console.log(guessLen);
-    if (e.code == "Enter" && guessLen == 1 && guess != "") {
-        console.log("guessing letter")
+    if (e.code == "Enter" && guessLen == 1) {
         guessLetter();
-    } else if (e.code == "Enter" && guess != 1) {
-        console.log("guessing word")
+    } else if (e.code == "Enter" && guessLen > 1) {
         guessWord();
     }
 }
