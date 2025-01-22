@@ -24,5 +24,9 @@ function addWord() {
     guessedWords.innerHTML += word + ", ";
     numWordsGuessed++;
     wordCount.innerHTML = "Word Count: " + numWordsGuessed;
-    let currHighScore = document.getElementById("highScore").innerHTML.substring(document.getElementById("highScore").innerHTML.length - 1);
+    let currHighScore = Number(document.getElementById("highScore").innerHTML.substring(document.getElementById("highScore").innerHTML.length - 1));
+    if (numWordsGuessed > currHighScore) {
+        document.getElementById("highScore").innerHTML = "Endless High Score: " + numWordsGuessed;
+       // saveHighScore("index.html");
+    }
 }
