@@ -1,5 +1,6 @@
 let endless = document.getElementById("endless");
 let numWordsGuessed = 0;
+localStorage.setItem("highScore", 0);
 
 endless.addEventListener("change", addWordCount);
 
@@ -24,9 +25,10 @@ function addWord() {
     guessedWords.innerHTML += word + ", ";
     numWordsGuessed++;
     wordCount.innerHTML = "Word Count: " + numWordsGuessed;
-    let currHighScore = Number(document.getElementById("highScore").innerHTML.substring(document.getElementById("highScore").innerHTML.length - 1));
-    if (numWordsGuessed > currHighScore) {
+    
+    if (numWordsGuessed > localStorage.getItem("highScore")) {
         document.getElementById("highScore").innerHTML = "Endless High Score: " + numWordsGuessed;
        // saveHighScore("index.html");
+        localStorage.setItem("highScore", numWordsGuessed);
     }
 }
